@@ -6,13 +6,12 @@ interface Props {
     action?: () => void;
 }
 
-
-function ButtonGlobal({ title }: Props) {
+function ButtonGlobal({ title, action }: Props) {
     return (
-        <Button>
+        <Button onClick={action}>
             <ButtonText>{title}</ButtonText>
         </Button>
-    )
+    );
 }
 
 export default memo(ButtonGlobal);
